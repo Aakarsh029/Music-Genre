@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="shortcut icon" href="./img/logo.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'music/img/logo.jpg' %}" type="image/x-icon">
     <!-- <link rel="stylesheet" href="./style.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -304,7 +305,7 @@
         }
 
         .background1 {
-            background: url("./img/b1.jpg");
+            background: url("{% static 'music/img/b1.jpg' %}");
             min-height: 100vh;
             min-width: 100vw;
             background-attachment: fixed;
@@ -331,7 +332,7 @@
         }
 
         .background2 {
-            background: url("./img/b2.jpg");
+            background: url("{% static 'music/img/b2.jpg' %}");
             min-height: 100vh;
             min-width: 100vw;
             background-attachment: fixed;
@@ -344,7 +345,7 @@
         }
 
         .background3 {
-            background: url("./img/b3.jpg");
+            background: url("{% static 'music/img/b3.jpg' %}");
             min-height: 100vh;
             min-width: 100vw;
             background-attachment: fixed;
@@ -357,7 +358,7 @@
         }
 
         .background4 {
-            background: url("./img/b4.jpg");
+            background: url("{% static 'music/img/b4.jpg' %}");
             min-height: 100vh;
             min-width: 100vw;
             background-attachment: fixed;
@@ -760,11 +761,11 @@
     </header>
 
     <section class="home">
-        <video class="video-slide active" src="./videos background/2.mp4" autoplay muted loop></video>
-        <video class="video-slide" src="./videos background/3.mp4" autoplay muted loop></video>
-        <video class="video-slide" src="./videos background/4.mp4" autoplay muted loop></video>
-        <video class="video-slide" src="./videos background/5.mp4" autoplay muted loop></video>
-        <video class="video-slide" src="./videos background/file.mp4" autoplay muted loop></video>
+        <video class="video-slide active" src="{% static 'music/videos background/2.mp4' %}"  autoplay muted loop></video>
+        <video class="video-slide" src="{% static 'music/videos background/3.mp4' %}" autoplay muted loop></video>
+        <video class="video-slide" src="{% static 'music/videos background/4.mp4' %}" autoplay muted loop></video>
+        <video class="video-slide" src="{% static 'music/videos background/5.mp4' %}" autoplay muted loop></video>
+        <video class="video-slide" src="{% static 'music/videos background/file.mp4' %}" autoplay muted loop></video>
         <div class="content active">
             <h1>Wonderful <br><span>Island</span></h1>
             <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
@@ -851,11 +852,11 @@
             <input type="radio" name="slider" id="s3">
             <input type="radio" name="slider" id="s4">
             <input type="radio" name="slider" id="s5">
-            <label for="s1" id="slide1"><img src="./img/1.jpg" alt=""></label>
-            <label for="s2" id="slide2"><img src="./img/2.jpg" alt=""></label>
-            <label for="s3" id="slide3"><img src="./img/3.jpg" alt=""></label>
-            <label for="s4" id="slide4"><img src="./img/4.jpg" alt=""></label>
-            <label for="s5" id="slide5"><img src="./img/6.jpg" alt=""></label>
+            <label for="s1" id="slide1"><img src="{% static 'music/img/1.jpg' %}" alt=""></label>
+            <label for="s2" id="slide2"><img src="{% static 'music/img/2.jpg' %}" alt=""></label>
+            <label for="s3" id="slide3"><img src="{% static 'music/img/3.jpg' %}" alt=""></label>
+            <label for="s4" id="slide4"><img src="{% static 'music/img/4.jpg' %}" alt=""></label>
+            <label for="s5" id="slide5"><img src="{% static 'music/img/6.jpg' %}" alt=""></label>
         </section>
     </div>
 
