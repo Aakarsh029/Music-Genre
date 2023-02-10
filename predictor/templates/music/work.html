@@ -97,7 +97,7 @@
             z-index: 777;
             content: '';
             position: absolute;
-            background: rgba(3, 96, 251, 0.3);
+            background: rgba(3, 96, 251, 0.25);
             width: 100%;
             height: 100%;
             top: 0;
@@ -666,6 +666,9 @@
             transition: all 0.5s;
             z-index: 10;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .card1:hover .imgbx {
@@ -698,7 +701,7 @@
             z-index: 1;
             width: calc(100% - 20px);
             height: calc(100% - 20px);
-            filter: grayscale(1);
+            /* filter: grayscale(1); */
         }
 
         .card1 .content {
@@ -737,9 +740,11 @@
         }
 
         .card1 .content .details .data {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            justify-content: center;
+            align-items: center;
             margin: 20px 0;
+            color: white;
         }
     </style>
 
@@ -751,15 +756,14 @@
         <div class="menu-btn"></div>
         <div class="navigation">
             <div class="navigation-items">
-                <a href="#gallery">Home</a>
-                <a href="">About</a>
-                <a href="">Explore</a>
-                <a href="">Gallery</a>
-                <a href="">Contact</a>
+                <a href="#Home">Home</a>
+                <a href="#Work">Work</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#About">About</a>
             </div>
         </div>
     </header>
-
+    <div id="Home"></div>
     <section class="home">
         <video class="video-slide active" src="{% static 'music/videos background/2.mp4' %}"  autoplay muted loop></video>
         <video class="video-slide" src="{% static 'music/videos background/3.mp4' %}" autoplay muted loop></video>
@@ -815,6 +819,7 @@
         <div class="quote" data-aos="zoom-in">Where words leave off, music begins.</div>
     </div>
     <div class="work">
+        <div id="Work"></div>
         <div id="basic-2" class="tabs">
             <div class="container">
                 <a id="errormess"></a>
@@ -830,7 +835,7 @@
                 <div class="row">
                     <form action="/result" method="POST" enctype="multipart/form-data" class="up-form">
                         {% csrf_token %}
-                        <input type="file" name='document' multiple="" class="up-input">
+                        <input type="file"  name='document' multiple="" class="up-input">
                         {{form.as_table}}
                         <p class="up-p">Drag your music file here or click in this area.</p>
                         <button type="submit" class="btn btn-sm btn-success"
@@ -864,17 +869,18 @@
         <div class="quote" style="color: #000;" data-aos="zoom-in">Good music, good friends, good vibes</div>
     </div>
 
-
+    <div id="About"></div>
     <div class="about">
         <div class="cardholder" data-aos="fade-right">
             <div class="card1">
                 <div class="lines"></div>
-                <div class="imgbx"></div>
+                <div class="imgbx"><img src="{% static 'music/img/Aakarsh.jpg' %}" alt=""></div>
                 <div class="content">
                     <div class="details">
-                        <h2>aakarsh <br><span>Senior UX/UI Designer</span></h2>
+                        <h2>Aakarsh Bansal <br><span> UX/UI Designer</span><br><span> Front End Developer</span></h2>
                         <div class="data">
-                            <h3>vhsdvbdhsvbhdbv <br>vbjdhvbxhcbv</h3>
+                            <h3>Btech : Nit Hamirpur</h3>
+                            <h3>Branch : Computer Engineering</h3>
                         </div>
                     </div>
                 </div>
@@ -883,12 +889,13 @@
         <div class="cardholder" data-aos="fade-left">
             <div class="card1">
                 <div class="lines"></div>
-                <div class="imgbx"></div>
+                <div class="imgbx"><img src="{% static 'music/img/sparsh.jpeg' %}" alt=""></div>
                 <div class="content">
                     <div class="details">
-                        <h2>aakarsh <br><span>Senior UX/UI Designer</span></h2>
+                        <h2>Sparsh Jain <br><span>Back End Django Developer</span></h2>
                         <div class="data">
-                            <h3>vhsdvbdhsvbhdbv <br>vbjdhvbxhcbv</h3>
+                            <h3>Btech : Nit Hamirpur</h3>
+                            <h3>Branch : Mechanical Engineering</h3>
                         </div>
                     </div>
                 </div>
